@@ -2,7 +2,7 @@
   "openapi" : "3.0.0",
   "info" : {
     "version" : "1.0.0",
-    "title" : "Book Management System",
+    "title" : "Book Management System not updated",
     "description" : "Contains API to create , access and modify the Book in DB",
     "contact" : {
       "name" : "Deeksha",
