@@ -1,0 +1,66 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "version" : "1.0.0",
+    "title" : "Book Management System",
+    "description" : "Contains API to create , access and modify the Book in DB",
+    "contact" : {
+      "name" : "Deeksha",
+      "url" : "dee.com",
+      "email" : "deeksha@123"
+    },
+    "termsOfService" : "terms",
+    "license" : {
+      "name" : "MIT",
+      "url" : "dummyLicence.com"
+    }
+  },
+  "servers" : [ {
+    "url" : "https://api.example.com/v1",
+    "description" : "Production Server"
+  } ],
+  "tags" : [ {
+    "name" : "Books"
+  } ],
+  "paths" : {
+    "/user/{userId}" : {
+      "get" : {
+        "summary" : "Returns a user by ID",
+        "tags" : [ "Books" ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : {
+                    "id" : {
+                      "type" : "integer",
+                      "default" : 10
+                    },
+                    "name" : {
+                      "type" : "string",
+                      "default" : "martin"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId" : ""
+      },
+      "parameters" : [ {
+        "schema" : {
+          "type" : "integer",
+          "example" : 10
+        },
+        "name" : "userId",
+        "in" : "path",
+        "required" : true,
+        "description" : "Id of the user to return"
+      } ]
+    }
+  }
+}
